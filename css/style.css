@@ -1,0 +1,456 @@
+@keyframes animacao-seta {
+	from {
+		transform: translateY(0);
+	}
+
+	to {
+		transform: translateY(20px);
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Barlow', sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	overflow-x: hidden;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+header.cabecalho {
+	height: 100vh;
+	background: url(../images/desktop/image-header.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.inicio {
+	height: 80px;
+	padding: 0 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 1.6em;
+	cursor: pointer;
+	color: #fff;
+}
+
+nav.menu ul {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-size: 0.9em;
+}
+
+nav.menu ul li {
+	margin-left: 50px;
+	cursor: pointer;
+}
+
+nav.menu ul li.btn a {
+	font-family: 'Fraunces', serif;
+	font-weight: 700;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	color: #000;
+	display: inline-block;
+	background: #fff;
+	padding: 10px 15px;
+	border-radius: 20px;
+}
+
+/* Botão hamburguer */
+div.hamburguer {
+	width: 30px;
+	height: 30px;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+}
+
+span.linha {
+	display: block;
+	height: 2px;
+	background: black;
+	position: relative;
+}
+
+span.linha::before {
+	content: '';
+	position: absolute;
+	top: -10px;
+	width: 100%;
+	height: 2px;
+	background: black;
+}
+
+span.linha::after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	height: 2px;
+	background: black;
+}
+
+header h1.abaixoMenu {
+	height: 190px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'Fraunces', serif;
+	font-size: 3em;
+	font-weight: 900;
+}
+
+header .container-icone {
+	text-align: center;
+}
+
+header .container-icone .icone-seta {
+	animation-name: animacao-seta;
+	animation-iteration-count: infinite;
+	animation-duration: 0.8s;
+	animation-direction: alternate;
+}
+
+section.gridBox {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 450px 450px 450px;
+}
+
+
+/* Estilizando box 1 e box 4 */
+section.gridBox div.box1,
+div.box4 {
+	padding: 80px 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+div.box1 h1.tituloCaixa1,
+div.box4 h1.tituloCaixa4 {
+	font-size: 2em;
+	color: hsl(167, 40%, 24%);
+	font-family: 'Fraunces', serif;
+	font-weight: 900;
+}
+
+div.box1 div.textoCaixa1,
+div.box4 div.textoCaixa4 {
+	line-height: 27px;
+	color: hsl(167, 40%, 24%);
+	font-size: 0.9em;
+}
+div.textoCaixa4 {
+	margin-top: -30px;
+}
+
+div.learn-more span {
+	font-family: 'Fraunces', serif;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+div.box2 {
+	background: url(../images/desktop/image-transform.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+div.box3 {
+	background: url(../images/desktop/image-stand-out.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+div.box5 {
+	background: url(../images/desktop/image-graphic-design.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 40px 150px;
+}
+
+/* Titulo caixa 5 e 6 */
+h1.tituloCaixa5,
+h1.tituloCaixa6 {
+	color: hsl(167, 40%, 24%);
+	font-family: 'Fraunces', serif;
+	font-weight: 700;
+}
+
+div.textoCaixa5 {
+	line-height: 27px;
+	color: hsl(167, 40%, 24%);
+	font-size: 0.9em;
+	
+}
+
+div.box6 {
+	background: url(../images/desktop/image-photography.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 40px 150px;
+}
+
+h1.tituloCaixa6 {
+	color: hsl(198, 62%, 26%);
+}
+
+div.textoCaixa6 {
+	line-height: 27px;
+	color: hsl(198, 62%, 26%);
+	font-size: 0.9em;
+}
+
+/* Estilização sessão testemunhas */
+
+section.testemunhas-clientes {
+	padding: 100px 70px; 
+	text-align: center;
+}
+
+.tituloTestemunhas {
+	letter-spacing: 0.3em;
+	font-family: 'Fraunces', serif;
+	text-transform: uppercase;
+	color: hsl(210, 4%, 67%);
+}
+
+.testemunhas {
+	margin-top: 50px;
+	height: 400px;
+	display: flex;
+}
+
+.emily, 
+.thomas, 
+.jennie {
+	height: 100%;
+	width: calc(100% / 3);
+	padding: 0 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.texto-testemunha {
+	line-height: 30px;
+	font-weight: 400;
+	color: hsl(212, 27%, 19%);
+}
+
+.foto-perfil img {
+	width: 30%;
+	border-radius: 50%;
+}
+
+.nome {
+	margin-bottom: 15px;
+	font-family: 'Fraunces', serif;
+	font-weight: 900;
+}
+
+.cargo {
+	font-size: 0.9em;
+	color: hsl(213, 9%, 39%);
+}
+
+/* Sessão de imagens */
+
+section.sessao-imagens {
+	height: 400px;
+	display: flex;
+}
+
+.imagem {
+	width: 25%;
+}
+
+footer {
+	background-color: rgb(145, 211, 196);
+	padding: 40px 0;
+	height: 250px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-between;
+}
+
+footer .rodape-logo {
+	font-size: 1.8em;
+	font-family: 'Fraunces', serif;
+	color: hsl(167, 40%, 24%);
+}
+
+nav.rodape-nav ul {
+	display: flex;
+	justify-content: center;
+}
+
+nav.rodape-nav ul li {
+	margin: 0 40px;
+}
+
+footer a {
+	color: hsl(212, 27%, 19%)
+}
+
+.rodape-redes-sociais i.fab {
+	margin: 0 20px;
+	font-size: 1.5em;
+}
+
+.nome-final {
+	font-size: 0.7em;
+}
+.nome-final a {
+	color: blue;
+}
+
+.menu-hamburguer {
+	display: none;
+}
+
+/* Responsividade */
+
+@media(max-width: 710px){
+
+	header h1.abaixoMenu {
+		text-align: center;
+	}
+
+	div.menu-hamburguer.mostrar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 80%;
+		height: 60%;
+		background: #fff;
+		position: absolute;
+		top: 80px;
+		right: 40px;
+		clip-path: polygon(0 11%, 89% 11%, 100% 0, 100% 100%, 54% 100%, 0 100%);
+		z-index: 1000;
+	}
+
+	div.menu-hamburguer ul {
+		display: block;
+		font-size: 1.2em;
+	}
+
+	div.menu-hamburguer.mostrar nav ul li {
+		margin: 40px 25px 0px 0;
+		text-align: center;
+	}
+
+	div.menu-hamburguer a.btn-contact {
+		margin: 0 auto;
+		padding: 10px;
+		border-radius: 10px;
+		background: orange;
+	}
+
+	div.menu-hamburguer a {
+		color: hsl(167, 40%, 24%);
+	}
+
+	nav.menu ul {
+		display: none;
+	}
+
+	div.hamburguer {
+		display: flex;
+	}
+
+	section.gridBox div.box1,
+	div.box4{
+		padding: 80px 10px;
+	}
+
+	div.box5,
+	div.box6 {
+		padding: 20px 20px;
+	}
+
+	.caixa {
+		height: 100vh;
+	}
+
+	section.testemunhas-clientes {
+		display: block;
+		padding: 30px 0;
+		height: auto;
+	}
+
+	.testemunhas {
+		flex-wrap: wrap;
+		width: 100%;
+		height: 100%;
+		margin: 30px 0;
+	}
+
+	.emily,
+	.thomas,
+	.jennie{
+		width: 100%;
+		height: auto;
+		margin: 20px 0;
+		padding: 20px 10px;
+	}
+
+	section.sessao-imagens {
+		height: auto;
+		flex-wrap: wrap;
+	}
+
+	.imagem {
+		width: 50%;
+	}
+
+}
+
+@media(max-width: 1000px){
+
+	section.gridBox {
+		display: block;
+	}
+
+	section.gridBox div.box2 {
+		height: 400px;
+		max-width: 100%;
+	}
+
+	section.gridBox div.box3 {
+		height: 400px;
+		width: 100%;
+	}
+}
